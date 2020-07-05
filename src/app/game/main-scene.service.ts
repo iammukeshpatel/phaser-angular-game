@@ -45,7 +45,7 @@ export class MainSceneService extends Phaser.Scene {
     this.platforms.create(50, 250, 'ground');
     this.platforms.create(750, 220, 'ground');
 
-    this.player = this.physics.add.sprite(100, 450, 'dude');
+    this.player = this.physics.add.sprite(100, 400, 'dude');
 
     this.player.setBounce(0.2);
     this.player.setCollideWorldBounds(true);
@@ -140,6 +140,7 @@ export class MainSceneService extends Phaser.Scene {
 
     this.gameOver = true;
     this.add.text(600 / 2, 800 / 2, 'Game Over', { fill: '#000' });
+    // this.scene.restart();
     // tslint:disable-next-line: semicolon
   };
 
