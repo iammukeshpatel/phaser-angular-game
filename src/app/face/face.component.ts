@@ -1,5 +1,6 @@
 import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import { FaceSceneService } from './face-scene.service';
+import { SceneMainService } from './scene-main.service';
 import 'phaser';
 
 @Component({
@@ -14,14 +15,14 @@ export class FaceComponent implements OnInit, AfterViewInit {
 
   keyPressed = '';
 
-  constructor(private faceScene: FaceSceneService) {}
+  constructor(private faceScene: FaceSceneService, private sceneMainService: SceneMainService) {}
 
   ngOnInit(): void {
     this.config = {
       type: Phaser.CANVAS,
       height: 600,
       width: 800,
-      scene: [this.faceScene],
+      scene: [this.faceScene, this.sceneMainService],
       parent: 'gameContainer',
       physics: {
         default: 'arcade',

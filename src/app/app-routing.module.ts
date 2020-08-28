@@ -7,7 +7,7 @@ import { FaceComponent } from './face/face.component';
 const routes: Routes = [
   { path: 'game', component: GameComponent},
   { path: 'face', component: FaceComponent},
-  { path: '', component: GameComponent},
+  { path: '', component: FaceComponent},
 ];
 
 @NgModule({
